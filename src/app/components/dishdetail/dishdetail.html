@@ -1,0 +1,38 @@
+<div
+  class="dish-detail"
+  *ngIf="dish"
+  [style.backgroundImage]="'url(' + dish.imageUrl + ')'"
+>
+  <div class="dish-overlay"></div>
+
+  <div class="dish-content">
+
+    <div class="dish-header">
+      <h1>{{ dish.name }}</h1>
+      <span class="price">\${{ dish.price }}</span>
+    </div>
+
+    <p class="description">
+      {{ dish.description }}
+    </p>
+
+    <div class="dish-info-box">
+      <h3>Details & Ingredients</h3>
+      <ul>
+        <li>Fresh ingredients</li>
+        <li>Prepared daily</li>
+        <li>Chef’s special recipe</li>
+      </ul>
+    </div>
+
+    <div class="dish-actions">
+      <button class="primary" [routerLink]="['/order', dish.id]">
+        Order Now
+      </button>
+      <button class="secondary" (click)="goBack()">
+        Back
+      </button>
+    </div>
+
+  </div>
+</div>

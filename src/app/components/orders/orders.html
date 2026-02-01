@@ -1,0 +1,29 @@
+<div class="orders-page">
+  <h2>All Orders</h2>
+
+  <ng-container *ngIf="orders$ | async as orders; else loading">
+    <div *ngIf="orders.length === 0" class="no-orders">
+      No orders yet.
+    </div>
+
+    <div class="orders-grid" *ngIf="orders.length > 0">
+      <div class="order-card" *ngFor="let order of orders">
+        <div class="order-header">
+          <strong>{{ order.dishName }}</strong> (Qty: {{ order.quantity }})
+        </div>
+
+        <div class="order-detail"><strong>Customer:</strong> {{ order.customerName }}</div>
+        <div class="order-detail"><strong>Address:</strong> {{ order.customerAddress }}</div>
+        <div class="order-detail"><strong>Phone:</strong> {{ order.customerPhone }}</div>
+        <div class="order-detail"><strong>Notes:</strong> {{ order.notes || '-' }}</div>
+        <div class="order-detail"><strong>Date:</strong> {{ formatDate(order.date) }}</div>
+
+        <button (click)="deleteOrder(order.id)">Delete</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <div class="loading">Loading orders...</div>
+  </ng-template>
+</div>

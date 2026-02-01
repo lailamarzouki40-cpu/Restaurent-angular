@@ -1,0 +1,42 @@
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section about">
+      <h3>About Us</h3>
+      <p>
+        Maison Gusté is a modern restaurant offering exquisite meals from around the world.
+        Fresh ingredients, elegant ambiance, and unforgettable flavors.
+      </p>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>📍 123 Main Street, Casablanca, Morocco</p>
+      <p>📞 +212 612 345 678</p>
+      <p>✉️ contact@savora.com</p>
+    </div>
+
+    <div class="footer-section hours">
+      <h3>Opening Hours</h3>
+      <ul>
+        <li *ngFor="let day of openingHours">{{ day.day }}: {{ day.hours }}</li>
+      </ul>
+    </div>
+
+    <div class="footer-section social">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 Maison Gusté. All Rights Reserved.
+  </div>
+</footer>

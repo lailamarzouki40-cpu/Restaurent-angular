@@ -1,0 +1,244 @@
+/* BASE PAGE */
+.about-page {
+  font-family: 'Cormorant Garamond', serif;
+  color: #2c2f33;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f5f3ef; /* soft warm background */
+}
+
+/* HERO SECTION */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto 100px;
+  padding: 80px 40px;
+  position: relative;
+  gap: 50px;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  color: #AFA06D;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.7rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* Hero Image floating style */
+.hero-img {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero-img img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.15);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.hero-img img:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* STORY SECTION */
+.about-story {
+  margin: 0 auto 100px;
+  max-width: 1400px;
+  padding: 0 40px;
+}
+
+.about-story h2 {
+  font-size: 3.5rem;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+
+.story-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.story-card {
+  width: 300px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.story-card p {
+  padding: 20px;
+  font-size: 1.05rem;
+  background: rgba(255,255,255,0.95);
+  color: #555;
+}
+
+.story-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+}
+
+/* VALUES SECTION */
+.about-values {
+  margin: 0 auto 100px;
+  max-width: 1400px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 3.5rem;
+  color: #2e7d32;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  width: 250px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: #fffdfa;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.value-card i {
+  font-size: 2.5rem;
+  color: #AFA06D;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 1.4rem;
+  color: #AFA06D;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+/* TEAM SECTION */
+.about-team {
+  margin: 0 auto 100px;
+  max-width: 1400px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 3.5rem;
+  color: #2e7d32;
+  margin-bottom: 60px;
+  font-weight: 900;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 250px;
+  border-radius: 25px;
+  padding: 25px 20px;
+  background: #fffdfa;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  color: #AFA06D;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.team-member:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .about-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .story-grid,
+  .values-grid,
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-card, .value-card, .team-member {
+    width: 80%;
+  }
+}

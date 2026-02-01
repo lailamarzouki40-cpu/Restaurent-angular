@@ -1,0 +1,97 @@
+.orders-page {
+  max-width: 1400px;
+  margin: 40px auto;
+  font-family: 'Cormorant Garamond', serif;
+  color: #fdfcf9;
+  padding: 20px;
+}
+
+.orders-page h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #AFA06D;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+}
+
+/* GRID OF ORDERS */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ORDER CARD */
+.order-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(255,215,0,0.4);
+}
+
+.order-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #AFA06D;
+  margin-bottom: 8px;
+}
+
+.order-detail {
+  font-size: 15px;
+  color: #fdfcf9;
+  line-height: 1.5;
+}
+
+.order-detail strong {
+  color: #fff;
+}
+
+/* DELETE BUTTON */
+.order-card button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #AFA06D;
+  color: #0B1D3B;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.order-card button:hover {
+  background: #d2b65a;
+  transform: translateY(-2px);
+}
+
+/* NO ORDERS MESSAGE */
+.no-orders {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px 0;
+  color: #eee;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #5a0606;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,24 @@
+<section class="best-dish-section"> 
+  <h2 class="section-title">Our Best Dishes</h2>
+  <div class="carousel"> 
+    <div class="carousel-track"> 
+      <div class="dish-card" *ngFor="let dish of bestDishes" [routerLink]="['/dish', dish.id]" > 
+        <img [src]="dish.imageUrl" [alt]="dish.name" /> 
+        <div class="dish-overlay"> 
+          <h3>{{ dish.name }}</h3> 
+          <p>{{ dish.description }}</p> 
+          <span class="price">{{ dish.price }} $</span> 
+          <button>View details</button> </div> 
+        </div> 
+        <div class="dish-card" *ngFor="let dish of bestDishes" [routerLink]="['/dish', dish.id]" > 
+          <img [src]="dish.imageUrl" [alt]="dish.name" /> 
+          <div class="dish-overlay"> 
+            <h3>{{ dish.name }}</h3> 
+            <p>{{ dish.description }}</p> 
+            <span class="price">{{ dish.price }} $</span> 
+            <button>View details</button> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </section>

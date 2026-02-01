@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="logo">
+  <img src="assets/logo.png" alt="Maison Gusté Logo" class="logo-img" />
+  <span class="logo-text">Maison Gusté</span>
+</div>
+
+
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="/dishmenu" routerLinkActive="active">
+        Menu
+      </a>
+    </li>
+    <li>
+      <a routerLink="/orders" routerLinkActive="active">
+        Orders
+      </a>
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </li>
+  </ul>
+</nav>

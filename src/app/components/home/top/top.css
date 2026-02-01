@@ -1,0 +1,163 @@
+/* ================= Hero Section ================= */
+.hero {
+  min-height: 95vh;
+  background-image: url('../../../../assets/top.jfif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+/* ---------------- Overlay ---------------- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11, 29, 59, 0.85),
+    rgba(11, 29, 59, 0.35),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1;
+}
+
+/* ---------------- Top Centered Logo ---------------- */
+.hero-logo-top {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo-top img {
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid var(--color-muted-gold);
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------- Hero Content ---------------- */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  color: #fdfcf9;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 60px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  margin-top: 80px; /* space below logo */
+  text-align: center;
+}
+
+/* Hero Eyebrow */
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  color: var(--color-muted-gold);
+  font-weight: 600;
+}
+
+/* Hero Title */
+.title {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  margin: 18px 0;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-pale);
+}
+
+/* Gold Divider */
+.gold-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--color-muted-gold);
+  margin: 25px auto;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  line-height: 1.7;
+  color: #eaeaea;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* Hero Button */
+.hero-btn {
+  padding: 14px 42px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: 2px solid var(--color-muted-gold);
+  color: var(--color-muted-gold);
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+}
+
+.hero-btn:hover {
+  background: var(--color-muted-gold);
+  color: var(--color-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ================= Media Queries for Responsiveness ================= */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 40px 30px;
+    margin-top: 70px;
+  }
+
+  .gold-divider {
+    width: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

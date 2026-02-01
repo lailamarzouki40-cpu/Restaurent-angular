@@ -1,0 +1,17 @@
+<section class="categories-section">
+  <h2 class="section-title">Explore Cuisines</h2>
+
+  <div class="categories-row">
+    <div *ngFor="let cat of categories" class="category-wrapper">
+      <img class="circle-img" [src]="cat.imageUrl" [alt]="cat.name">
+
+      <div class="hover-rectangle">
+        <h3>{{ cat.name }}</h3>
+        <button
+          [routerLink]="['/dishmenu']"
+          [queryParams]="{ nationality: cat.nationality }" >  View Menu
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

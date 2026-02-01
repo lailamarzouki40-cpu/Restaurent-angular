@@ -1,0 +1,126 @@
+.dish-detail {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* DARK OVERLAY */
+.dish-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.35)
+  );
+}
+
+/* CONTENT CARD */
+.dish-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #fdfcf9;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.05);
+  padding: 50px 55px;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* HEADER */
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.dish-header h1 {
+  font-size: 3.4rem;
+  margin: 0;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #AFA06D;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #eeeeee;
+  margin-bottom: 35px;
+  font-style: italic;
+}
+
+/* INFO BOX */
+.dish-info-box {
+  border-left: 3px solid #AFA06D;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.dish-info-box h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.dish-info-box ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.dish-info-box li {
+  margin-bottom: 8px;
+  color: #dddddd;
+}
+
+/* ACTIONS */
+.dish-actions {
+  display: flex;
+  gap: 18px;
+}
+
+button {
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* PRIMARY */
+button.primary {
+  background: #AFA06D;
+  color: #0B1D3B;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #d2b65a;
+  transform: translateY(-2px);
+}
+
+/* SECONDARY */
+button.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255,255,255,0.6);
+}
+
+button.secondary:hover {
+  background: rgba(255,255,255,0.15);
+}

@@ -1,0 +1,94 @@
+<div class="order-page" *ngIf="dish">
+
+  <div class="order-wrapper">
+
+    <!-- LEFT: Dish + Vertical Progress -->
+    <div class="order-left">
+      <div class="dish-hero">
+        <img [src]="dish.imageUrl" alt="{{ dish.name }}" />
+        <div class="dish-overlay">
+          <h2>{{ dish.name }}</h2>
+          <span class="price">\${{ dish.price }}</span>
+        </div>
+      </div>
+
+      <div class="vertical-progress">
+        <div class="step" [class.active]="step >= 1"><span>1</span></div>
+        <div class="line"></div>
+        <div class="step" [class.active]="step >= 2"><span>2</span></div>
+        <div class="line"></div>
+        <div class="step" [class.active]="step >= 3"><span>3</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form + Order Summary -->
+    <div class="order-right">
+
+      <div class="form-section">
+
+        <!-- STEP 1: Quantity -->
+        <div *ngIf="step === 1" class="form-step fade">
+          <h3>Quantity</h3>
+          <div class="input-group">
+            <label>How many?</label>
+            <input type="number" [(ngModel)]="quantity" min="1" />
+          </div>
+          <div class="buttons">
+            <button (click)="nextStep()">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Customer Info -->
+        <div *ngIf="step === 2" class="form-step fade">
+          <h3>Customer Info</h3>
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="customerName" />
+          </div>
+          <div class="input-group">
+            <label>Address</label>
+            <input type="text" [(ngModel)]="customerAddress" />
+          </div>
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="text" [(ngModel)]="customerPhone" />
+          </div>
+          <div class="buttons">
+            <button (click)="prevStep()">Back</button>
+            <button (click)="nextStep()">Next</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Notes & Review -->
+        <div *ngIf="step === 3" class="form-step fade">
+          <h3>Notes & Review</h3>
+          <div class="input-group">
+            <label>Special requests / Notes</label>
+            <textarea [(ngModel)]="notes" placeholder="Any special requests?"></textarea>
+          </div>
+          <div class="buttons">
+            <button (click)="prevStep()">Back</button>
+            <button class="submit" (click)="submitOrder()">Place Order</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="order-summary">
+  <h3>Order Summary</h3>
+  <div class="summary-card">
+    <div class="summary-image">
+      <img [src]="dish.imageUrl" alt="{{ dish.name }}" />
+    </div>
+    <div class="summary-info">
+      <span class="dish-name">{{ dish.name }}</span>
+      <span class="dish-quantity">Qty: {{ quantity }}</span>
+      <span class="dish-total">Total: ${{ (dish.price * quantity).toFixed(2) }}</span>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>

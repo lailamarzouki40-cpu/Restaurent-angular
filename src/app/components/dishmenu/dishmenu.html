@@ -1,0 +1,59 @@
+<div class="menu-container">
+  <div class="menu-filters">
+    <input
+      type="text"
+      placeholder="Search dishes..."
+      [(ngModel)]="searchTerm"
+      (input)="applyFilters()"
+    />
+
+    <select [(ngModel)]="selectedNationality" (change)="applyFilters()">
+      <option value="all">All cuisines</option>
+      <option *ngFor="let nat of nationalities" [value]="nat">
+        {{ nat | titlecase }}
+      </option>
+    </select>
+
+    <input
+      type="number"
+      placeholder="Max price"
+      [(ngModel)]="maxPrice"
+      (input)="applyFilters()"
+    />
+
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        [(ngModel)]="onlyAvailable"
+        (change)="applyFilters()"
+      />
+      Available only
+    </label>
+  </div>
+
+  <div class="dish-grid">
+    <div class="dish-card" *ngFor="let dish of filteredDishes">
+      <div class="card-media">
+        <img [src]="dish.imageUrl" alt="{{ dish.name }}" />
+        <div class="card-overlay">
+          <h3>{{ dish.name }}</h3>
+          <span class="price">\${{ dish.price }}</span>
+        </div>
+      </div>
+
+      <div class="card-hover">
+        <p>{{ dish.description }}</p>
+
+        <ul>
+          <li>Fresh ingredients</li>
+          <li>Chef special</li>
+          <li>Served hot</li>
+        </ul>
+
+        <button [routerLink]="['/dish', dish.id]">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
