@@ -107,8 +107,9 @@ restaurant-app/
 ## 🔧 Instructions pour exécuter le projet
 1. Cloner le dépôt :  
 ```bash
-git clone <URL-DU-DEPOT>
-cd restaurant-app
+git clone https://github.com/lailamarzouki40-cpu/Restaurent-angular.git
+cd Restaurent-angular
+
 ```
 2. Installer les dépendances :
 ```bash
