@@ -113,7 +113,7 @@ cd Restaurent-angular
 ```
 2. Installer les dépendances :
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 3. Lancer le serveur Angular :
 ```bash
